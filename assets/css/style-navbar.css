@@ -1,0 +1,157 @@
+nav{
+    font-family: 'DM Sans', sans-serif;
+    background-color: #F0F1F1;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    height: 95px;
+    width: 100%;
+    font-size: 16px;
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    z-index: 9999;
+}
+
+#navigation-bar{
+    padding-top: 20px;
+    display : flex;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-pradita{
+    width: 130px;
+    padding-left: 20px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin-top: 15px;
+    margin-right: 10%;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+nav ul li a {
+    color : #353535;
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: 500;
+    padding: 5px 20px 5px 20px;
+    transition: all 0.2s;
+    padding-bottom: 10px;
+    border-bottom: 0px solid #F26E21;
+    
+}
+
+nav ul li a:hover {
+    color : #F26E21;
+    border-color: #F26E21;
+    transition: all 0.4s;
+    border-bottom: 5px solid #F26E21;
+}
+
+
+/*Hamburger menu*/
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    height : 20px;
+    justify-content:space-between;
+    position: relative;
+}
+
+.menu-toggle input {
+    position: absolute;
+    width : 41px;
+    height : 28px;
+    left: -5.8px;
+    top: -3px;
+    opacity : 0;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.menu-toggle span {
+    display: block;
+    width : 28px;
+    height : 3px;    
+    border-radius: 3px;
+    background-color: #000000;
+    transition: all 0.4s;
+}
+
+/*Hamburger Menu Animation*/
+.menu-toggle span:nth-child(2) {
+    transform-origin: 0 0;
+}
+
+.menu-toggle span:nth-child(4) {
+    transform-origin: 0 100%;
+}
+
+.menu-toggle input:checked ~ span:nth-child(2){
+    background-color: #F26E21;
+    transform: rotate(45deg) translate(-1px, -1px);
+}
+
+.menu-toggle input:checked ~ span:nth-child(3){
+    opacity: 0;
+    transform: scale(0);
+}
+
+.menu-toggle input:checked ~ span:nth-child(4){
+    background-color: #F26E21;
+    transform: rotate(-45deg) translate(-1px, 0);
+}
+
+@media(min-width: 840px) and (max-width:801px) {
+    .in-slider {
+        font-size: 10px;
+    }
+}
+
+@media(max-width: 800px){
+    .hamburger{
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 40px;
+    }
+
+    .menu-toggle {
+        display: flex;
+        margin-top: 20px;
+    }
+
+    
+    nav ul#navbar-options{
+        text-decoration: none;
+        padding: 0;
+        position: fixed;
+        top : 80px;
+        width: 110%;
+        height: 90%;
+        justify-content: space-evenly;
+        flex-direction: column;
+        align-items: center;
+        backdrop-filter: blur(15px) brightness(90%);
+        transform: translateX(100%);
+        transition: all 1s;
+        opacity: 0;
+    }
+
+    nav ul#navbar-options.slide{
+        opacity : 1;
+        transform: translateX(-26.75%);
+    }
+
+    nav ul li a {
+        font-size: 1.1em;
+        top : -70px;
+    }
+    
+}
