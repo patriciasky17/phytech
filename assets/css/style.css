@@ -1,0 +1,82 @@
+:root{
+    --primary: #FFFDD0;
+    --secondary: #292b2c;
+    --tertiary: #292b2c;
+    --quaternary: #292b2c;
+    --quinary: #292b2c;
+    --senary: #292b2c;
+    --septenary: #292b2c;
+
+    --orange-text-color: #F26E21;
+}
+
+#welcome{
+    background-image: url(../svg/wave-welcome.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    font-family: 'DM Sans', sans-serif;
+}
+
+.welcome-section{
+    margin-top: 120px;
+}
+
+.welcome-section h1{
+    font-weight: 600;
+    text-align: justify;
+}
+
+.welcome-section p{
+    font-weight: 400;
+    text-align: justify;
+    font-size: 16px;
+}
+
+.welcome-subsection:not(:last-child){
+    line-height: 40px;
+}
+
+.welcome-subsection:nth-child(1) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.welcome-section span{
+    color: var(--orange-text-color);
+}
+
+.welcome-section .button-welcome button{
+    font-size: 14px;
+    font-weight: 500;
+    background-color: var(--primary);
+    margin-right: 20px;
+    color: black;
+    border: 4px solid #f6ac68; 
+    border-radius: 25px;
+    padding: 6px 30px;
+    font-weight: 600;
+}
+
+@media screen and (min-width: 769px) {
+    
+}
+
+@media screen and (max-width: 768px) {
+    #welcome .welcome-subsection:nth-child(1){
+        order: 2;
+        align-items: center;
+    }
+
+    #welcome .welcome-subsection:nth-child(2){
+        order: 1;
+    }
+}
+
+/*this is your grey background (fot first section)*/
+/* 
+background :
+linear-gradient(#FEF6E9 0 0) padding-box, 
+linear-gradient(180deg, rgba(242,110,33,1) 0%, rgba(249,161,33,1) 100%) border-box; */
