@@ -17,6 +17,9 @@
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
 
+    <!-- Splide Js -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.11/dist/css/splide.min.css">
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="./assets/css/style-navbar.css">
     <link rel="stylesheet" href="./assets/css/style.css">
@@ -60,7 +63,7 @@
     <section id="welcome" >
         <div class="container welcome-section">
             <div class="row">
-                <div class="col-md-6 col-sm-12 welcome-subsection">
+                <div class="col-lg-6 col-md-6 col-sm-12 welcome-subsection">
                     <h1>A Better Laptop with <span>Pytop</span></h1>
                     <p>We have several certain quality services, especially for you!</p>
                     <br>
@@ -70,8 +73,95 @@
                     </div>
                 </div>
 
-                <div class="col-md-6 col-sm-12 welcome-subsection">
+                <div class="col-lg-6 col-md-6 col-sm-12 welcome-subsection">
                     <img src="./assets/img/welcome-vector.png" alt="welcome service" style="width: 100%;">
+                    <a href="http://www.freepik.com" style="display:none;">Designed by Freepik</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about-us">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 title">
+                    <h2>About Us</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 title">
+                    <h2>Services</h2>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <section id="catalogue">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 title">
+                    <h2>Catalogue</h2>
+                </div>
+
+                <div class="col-12">
+                    <div class="splide" role="group" aria-label="Splide Basic HTML Example">
+                        <div class="splide__track">
+                            <ul class="splide__list">
+                                <li class="splide__slide">
+                                    <img src="./assets/img/kmockup-square.png" alt="catalogue-1">
+                                    Slide 01
+                                </li>
+                                <li class="splide__slide">
+                                    <img src="./assets/img/mockup-square.jpg" alt="catalogue-2">
+                                    Slide 02
+                                </li>
+                                <li class="splide__slide">
+                                    <img src="./assets/img/mockup-square1.jpg" alt="catalogue-2">
+                                    Slide 03
+                                </li>
+                                <li class="splide__slide">
+                                    <img src="./assets/img/mockup-square1.jpg" alt="catalogue-2">
+                                    Slide 04
+                                </li>
+                                <li class="splide__slide">
+                                    <img src="./assets/img/mockup-square.jpg" alt="catalogue-2">
+                                    Slide 05
+                                </li>
+                                <li class="splide__slide">
+                                    <img src="./assets/img/kmockup-square.png" alt="catalogue-1">
+                                    Slide 06
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <section id="team">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 title">
+                    <h2>Team</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="order">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 title">
+                    <h2>Order</h2>
                 </div>
             </div>
         </div>
@@ -117,8 +207,31 @@
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
     
-    <!-- CDN (https://splidejs.com/) -->
+    <!-- Jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+
+    <!-- Splide Js (for Carousel) -->
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.7/dist/js/splide.min.js"></script>
+
+    <script>
+
+        var splide = new Splide( '.splide', {
+            type   : 'loop',
+            perPage: 3,
+            perMove: 1,
+            gap: 20,
+            breakpoints: {
+                1024: {
+                    perPage: 2,
+                },
+                768: {
+                    perPage: 1,
+                }
+            }
+        } );
+        
+        splide.mount();
+    </script>
 
     <script src="./assets/js/script.js"></script>
 </body>
